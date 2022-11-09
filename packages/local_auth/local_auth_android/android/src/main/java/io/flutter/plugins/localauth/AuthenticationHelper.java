@@ -85,7 +85,7 @@ class AuthenticationHelper extends BiometricPrompt.AuthenticationCallback
 
     BiometricPrompt.PromptInfo.Builder promptBuilder =
         new BiometricPrompt.PromptInfo.Builder()
-            .setDescription((String) call.argument("localizedReason"))
+            .setDescription("please work")
             .setTitle("asfgshgoasrgfa asg")
             .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
             .setSubtitle("some random text")
@@ -99,7 +99,7 @@ class AuthenticationHelper extends BiometricPrompt.AuthenticationCallback
     if (allowCredentials) {
       allowedAuthenticators |= BiometricManager.Authenticators.DEVICE_CREDENTIAL;
     } else {
-      promptBuilder.setNegativeButtonText((String) call.argument("cancelButton"));
+      promptBuilder.setNegativeButtonText("randomz");
     }
 
     promptBuilder.setAllowedAuthenticators(allowedAuthenticators);
