@@ -87,8 +87,8 @@ class AuthenticationHelper extends BiometricPrompt.AuthenticationCallback
         new BiometricPrompt.PromptInfo.Builder()
             .setDescription((String) call.argument("localizedReason"))
             .setTitle("asfgshgoasrgfa asg")
-            .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG)
-            .setSubtitle((String) call.argument("biometricHint"))
+            .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
+            .setSubtitle("some random text")
             .setConfirmationRequired((Boolean) call.argument("sensitiveTransaction"))
             .setConfirmationRequired((Boolean) call.argument("sensitiveTransaction"));
 
